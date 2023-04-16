@@ -11,3 +11,9 @@ module.exports = {
     idle: 10000
   }
 };
+
+
+//my-photogallery-bucket
+//ap-south-1
+//AKIAZWV4ZIWHIEVB6G3S
+//ERltFZwntvGyMh76MixeUKhQ+s9qzJhMyAqQucT9

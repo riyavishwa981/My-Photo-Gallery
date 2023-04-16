@@ -4,23 +4,133 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Node.js upload images</title>
+    <title>My Photo Gallery</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      body {
+        margin-top: 70px;
+        font-family: "Lobster", cursive;
+        background-image: url("https://img.freepik.com/free-vector/abstract-watercolor-background_23-2149038179.jpg?w=996&t=st=1681657022~exp=1681657622~hmac=72f53706286c417f894ca3e0a436371bf4a3256efa5891f86c1d3941ba674d8c");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
       div.preview-images > img {
         width: 30%;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 mt-3">
-          <h4>Node.js upload images - bezkoder.com</h4>
-
+    <div>
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+        "
+      >
+        <span
+          class="fas fa-heart"
+          style="color: rgb(180, 10, 10); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(185, 21, 200); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(10, 78, 180); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(10, 180, 55); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(226, 219, 28); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <h1>My Photo Gallery</h1>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(180, 10, 10); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(185, 21, 200); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(10, 78, 180); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(10, 180, 55); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="fas fa-heart"
+          style="color: rgb(226, 219, 28); font-size: 50px"
+          aria-hidden="true"
+        ></span>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <h2 style="margin-top: 30px">
+          Upload your photos here and make your own personal gallery !!!
+        </h2>
+      </div>
+      <div
+        class="container"
+        style="
+          margin-top: 60px;
+          padding-top: 20px;
+          padding-bottom: 30px;
+          height: 500px;
+          background-image: url('https://img.freepik.com/free-vector/abstract-colorful-soft-watercolor-texture-background_1035-18958.jpg?w=900&t=st=1681657252~exp=1681657852~hmac=3f4797885553e6a5d9670831e51bcb5e5e0fb9755fe190780c05e88cf401c933');
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 30px;
+        "
+      >
+        <div
+          style="
+            margin-top: 25px;
+            background-color: antiquewhite;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-left: 100px;
+            margin-right: 100px;
+          "
+        >
+          <h2>Upload your photo</h2>
+        </div>
+        <div
+          style="display: flex; flex-direction: row; justify-content: center"
+        >
           <form
             class="mt-4"
             action="/upload"
@@ -28,6 +138,25 @@
             enctype="multipart/form-data"
           >
             <div class="form-group">
+              <br />
+              <label
+                for="exampleInputName"
+                style="color: white; font-size: x-large"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                name="fullname"
+                class="form-control"
+                id="exampleInputName"
+                placeholder="Enter your name"
+              />
+              <br />
+              <label
+                for="exampleInputFile"
+                style="color: white; font-size: x-large"
+                >Upload Image</label
+              >
               <input
                 type="file"
                 name="file"
@@ -35,27 +164,22 @@
                 class="form-control-file border"
               />
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <br />
+            <button type="submit" class="btn btn-dark btn-lg">Submit</button>
           </form>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="preview-images"></div>
         </div>
       </div>
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-      $(document).ready(function() {
-        let imagesPreview = function(input, placeToInsertImagePreview) {
+      $(document).ready(function () {
+        let imagesPreview = function (input, placeToInsertImagePreview) {
           if (input.files) {
             let filesAmount = input.files.length;
             for (i = 0; i < filesAmount; i++) {
               let reader = new FileReader();
-              reader.onload = function(event) {
+              reader.onload = function (event) {
                 $($.parseHTML("<img>"))
                   .attr("src", event.target.result)
                   .appendTo(placeToInsertImagePreview);
@@ -64,7 +188,7 @@
             }
           }
         };
-        $("#input-files").on("change", function() {
+        $("#input-files").on("change", function () {
           imagesPreview(this, "div.preview-images");
         });
       });
