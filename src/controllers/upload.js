@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const ID = 'AKIAZWV4ZIWHIEVB6G3S'; const SECRET = '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'; // The name of the bucket that you have created const BUCKET_NAME = 'test-bucket';
+const ID = ''; const SECRET = ''; // The name of the bucket that you have created const BUCKET_NAME = 'test-bucket';
 const fs = require('fs'); 
 const db = require("../models");
 const Image = db.images;
